@@ -1,0 +1,145 @@
+﻿<!--------------
+    Student
+    View
+-------------->
+@if (Model.User.UserName == User.Identity.Name)
+{
+    <div class="container donations" style="width:inherit">
+        <div class="panel panel-default" id="donationsPanel">
+            <div class="panel-heading">
+                <h3>Donations</h3>
+                <button style="width:50%" id="viewDonBackBtn" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Go Back"><i class="glyphicon glyphicon-arrow-left"></i> Back</button>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed table-responsive table-striped" style="border-collapse:collapse;">
+
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Donation Amount</th>
+                            <th>Donor Name</th>
+                            <th>Donation Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{int i = 0;}
+                        @foreach (var donation in Model.ActiveTrip.Donations)
+                        {
+
+                            <tr data-toggle="collapse" data-target="#collapse_@i" class="accordion-toggle">
+                                <td><button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-chevron-down"></span></button></td>
+                                <td><strong>$@donation.Amount .00</strong></td>
+                                <td>@donation.Donor.Name</td>
+                                <td>@donation.Created.ToString("dd MMM yyyy")</td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="collapse_@i">
+                                        <table class="table table-striped table-responsive">
+                                            <thead>
+                                                <tr><th>Donation Message</th><th>Thank The Donor</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p style="max-width:70%"> @donation.DonationMsg</p>
+                                                        <script> var Di = @i;</script>
+                                                    </td>
+                                                    @if (donation.HaveThanked == false && donation.Donor.Name != "Anonymous")
+                                                    {
+                                                        <td>
+                                                            <button style="width:100%" class="btn btn-success btn-sm" data-toggle="modal" data-target="#thankModal"><span class="glyphicon glyphicon-envelope"></span></button>
+                                                        </td>
+                                                        using (Html.BeginForm("SendThankYou", "User", new { donId = donation.Id, stuId = Model.Student.Id }, FormMethod.Post))
+                                                        {
+
+                                                            <div class="modal fade" id="thankModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div id="thankModalContnet" class="modal-content" style="max-width:475px">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Thank You Message</h5>
+                                                                        </div>
+                                                                        <form>
+                                                                            <div class="modal-body">
+
+                                                                                <div class="form-group">
+                                                                                    <label for="thankMsg" class="form-control-label">Message:</label>
+                                                                                    <textarea class="form-control" id="thankMsg" name="thxMsg" style="margin-top: 0px; margin-bottom: 0px; margin-left: 15px; height: 172px; min-width:400px" required></textarea>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button style="width:25%" type="submit" class="btn btn-success" id="sendThanksBtn" value="sendThanks">
+                                                                                    <span class="glyphicon glyphicon-send"> Send</span>
+                                                                                </button>
+
+                                                                                <button style="width:50%" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>
+                                                            <p style="width:30%">N/A</p>
+                                                        </td>
+                                                    }
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            i++;
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+}
+
+<!--------------
+    Admin
+    View
+-------------->
+@if ((User.IsInRole("Admin") && ViewBag.UserSchId == Model.School.Id) && Model.ActiveTrip != null)
+{
+        <div class="donations-card card donations">
+            <div class="card-block">
+                <table class="table table-condensed table-responsive table-striped" style="border-collapse:collapse;">
+
+                    <thead>
+                        <tr>
+                            <th>Donor Name</th>
+                            <th>Donor Email</th>
+                            <th>Donor Phone</th>
+                            <th>Donation Amount</th>
+                            <th>Donation Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var donation in Model.ActiveTrip.Donations)
+                        {
+                            <tr>
+                                <td>@donation.Donor.Name</td>
+                                <td>@donation.Donor.Email</td>
+                                <td>@donation.Donor.Phone</td>
+                                <td>$@donation.Amount.00</td>
+                                <td>@donation.Created.ToString("dd MMM yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+}

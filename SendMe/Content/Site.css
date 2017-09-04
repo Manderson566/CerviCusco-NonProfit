@@ -1,0 +1,1132 @@
+﻿html {
+    min-height: 100%;
+}
+
+body {
+    margin-top: 2rem;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 90%;
+    margin: 3%;
+    padding-bottom: 2%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 80%;
+}
+
+
+/*--------------------------------------------------*/
+
+a {
+    color: #730023;
+}
+a:hover {
+    color: #555555;
+}
+
+.wrapper {
+    min-width: 100%;
+}
+
+#donorTable {
+    margin: 10px;
+    min-width: 100%;
+}
+
+td {
+    padding: 15px;
+}
+
+.btn-primary {
+    background-color: #98012e;
+    border-color: #fff;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+        color: #ffffff;
+        background-color: #660220;
+        border-color: #fff;
+    }
+
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+        background-image: none;
+    }
+
+body {
+    background: #E6EBF1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.group {
+    background: white;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10), 0 3px 6px 0 rgba(0,0,0,0.08);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+label {
+    position: relative;
+    color: #8898AA;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.group label:not(:last-child) {
+    border-bottom: 1px solid #F0F5FA;
+}
+
+label > span {
+    width: 80px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.field {
+    background: transparent;
+    font-weight: 300;
+    border: 0;
+    color: #31325F;
+    outline: none;
+    flex: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: text;
+}
+
+    .field::-webkit-input-placeholder {
+        color: #CFD7E0;
+    }
+
+    .field::-moz-placeholder {
+        color: #CFD7E0;
+    }
+
+button {
+    float: left;
+    display: block;
+    background: #98012e;
+    color: white;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10), 0 3px 6px 0 rgba(0,0,0,0.08);
+    border-radius: 4px;
+    border: 0;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+}
+
+    button:focus {
+        background: #730023;
+    }
+
+    button:active {
+        background: #660220;
+    }
+
+.outcome {
+    float: left;
+    width: 100%;
+    padding-top: 8px;
+    min-height: 24px;
+    text-align: center;
+}
+
+.success, .error {
+    display: none;
+    font-size: 13px;
+}
+
+    .success.visible, .error.visible {
+        display: inline;
+    }
+
+.error {
+    color: #E4584C;
+}
+
+.success {
+    color: #666EE8;
+}
+
+    .success .token {
+        font-weight: 500;
+        font-size: 13px;
+    }
+/* Hide thankBtn*/
+.hide {
+    display: none;
+}
+
+h1 {
+    color: #660220;
+}
+
+.row {
+    margin: 0;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+#contact_success_message {
+    display: none;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+/*---------------------------------
+
+          Color Palette
+
+---------------------------------*/
+
+.primary-color {
+    background-color: #98012e;
+}
+
+.dark-primary-color {
+    background-color: #660220;
+}
+
+.medium-primary-color {
+    background-color: #730023;
+}
+
+.accent-color {
+    background-color: #fff;
+}
+
+.dark-accent-color {
+    background-color: #556080;
+}
+
+.medium-accent-color {
+    background-color: #DADEE0;
+}
+
+.dark-text-color {
+    color: #fff;
+}
+
+/*-----------------------
+
+    Donations Panel
+
+-----------------------*/
+
+#donationsPanel .col-md-4 {
+    padding: 0;
+    border-radius: 0;
+}
+
+#donationsPanel {
+    max-width: 100%;
+}
+
+select {
+    border-radius: 5px;
+}
+
+/*-----------------------------
+
+   About/Contact/Login Pages
+
+-----------------------------*/
+.about-content {
+    margin: 2% 5% 5% 5%;
+    background-color: #fff;
+    color: #020202;
+    padding: 5%;
+    border: rgba(0,0,0,0.08);
+    border-radius: 15px;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10), 0 3px 6px 0 rgba(0,0,0,0.08);
+}
+
+    .about-content h2 {
+        text-align: center;
+        color: #730023;
+    }
+
+    .about-content li {
+        padding-bottom: 5px;
+    }
+
+
+.about-title {
+    max-height: 200px;
+    margin-left: 25%;
+}
+
+.about-content .form-div-1 {
+    margin-top: 5%;
+}
+
+form .about-content {
+    min-width: 600px;
+    min-height: 400px;
+    text-align: center;
+}
+
+.about-content .button-wrapper {
+    margin-top: 20px;
+}
+
+.about-content input {
+    border-radius: 5px;
+}
+
+.about-content .profile-pic {
+    max-width: 35%;
+    margin-left: 30%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.about-content h3 {
+    text-align: center;
+}
+
+.about-content a {
+    text-decoration: none;
+    color: #730023;
+}
+
+.about-content a:hover {
+    color: #555555;
+}
+
+#loginForm .form-group {
+    margin-left: 5%;
+}
+
+#loginForm {
+    max-width: 55%;
+    margin: inherit;
+}
+
+#registration {
+    max-width: 55%;
+}
+
+/*-----------------------
+
+      Manage Account
+
+------------------------*/
+#manage-acct .about-content {
+    margin: 1%;
+}
+
+/*-----------------------
+
+      Share Icons
+    https://codepen.io/Deadlymuffin/pen/hGiqo/
+
+------------------------*/
+.stuProfShare {
+    text-align: center;
+}
+
+.social-icon {
+    color: #fff;
+    margin: 0;
+}
+
+ul.social-icons {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    padding: 10px 15px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+
+    .fa-facebook:hover {
+        background-color: #3d5b99;
+    }
+
+.fa-twitter {
+    padding: 10px 11px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+
+    .fa-twitter:hover {
+        background-color: #00aced;
+    }
+
+.fa-google-plus {
+    padding: 10px 8px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background-color: #322f30;
+    border-radius: 50%;
+}
+
+    .fa-google-plus:hover {
+        background-color: #e25714;
+    }
+
+.fa-github {
+    padding: 8px 10px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+    .fa-github:hover {
+        background-color: #322f30;
+        color: #fff;
+    }
+
+
+/*-----------------------
+
+      General Card
+        Settings
+
+------------------------*/
+.card {
+    margin-bottom: 3%;
+    min-height: 50%;
+}
+
+.card-block {
+    padding: 2rem;
+    margin-top: 3%;
+}
+
+.card-title, .card-subtitle {
+    text-align: center;
+}
+
+.card:first-child {
+    opacity: .99;
+}
+
+.card-img-top {
+    position: relative;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+    min-height: 400px;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url(/Img/globe-bg.jpg);
+    background-position: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*-----------------------
+
+      Profile Card
+
+------------------------*/
+
+.profile-pic {
+    border-radius: 50%;
+    z-index: -1;
+    display: block;
+}
+
+.profile-card {
+    background-color: #fff;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 25%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border-radius: 5px;
+    left: 0;
+}
+
+.card-prof-pic {
+    top: 20%;
+    left: 33%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    max-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
+}
+
+    .card-prof-pic:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+.bio {
+    margin: 25px 0 25px 15%;
+}
+
+#tripPartial {
+    position: relative;
+}
+
+/*-----------------------
+
+      Trip Card
+
+------------------------*/
+
+.trip-card {
+    background-color: #fff;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 25%;
+    min-height: 700px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border-radius: 5px;
+    left: 0;
+}
+
+#inactiveTrips li {
+    list-style: none;
+}
+
+#inactiveTrips button {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*-----------------------
+
+   Small Student Card
+  (school profile page)
+
+------------------------*/
+.card-prof-pic-sm {
+    top: 50px;
+    left: 33%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    max-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
+}
+
+    .card-prof-pic-sm:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+.sm-prof-card .card-img-top {
+    min-height: 200px;
+}
+
+.sm-prof-card {
+    min-height: 440px;
+}
+
+.donateSch {
+    border-radius: 50%;
+    padding: 12px 2px;
+    height: 50px;
+    width: 50px;
+    background-color: #98012e;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    color: #fff;
+}
+
+#schDonateToggle .school-card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border-radius: 5px;
+}
+
+
+/*---------------------------------------
+
+         School Profile Card
+
+---------------------------------------*/
+.school-card .card-prof-pic {
+    top: 45%;
+    left: 40%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    width: 55%;
+    max-width: 250px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
+}
+
+    .school-card .card-prof-pic:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+.school-card .card-block {
+    margin-top: 6%;
+}
+
+/*-----------------------
+    
+    Admin
+    Donations Table
+
+-----------------------*/
+
+.donations-card {
+    min-width: 100%;
+    margin-left: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/*------------------------
+
+    Manage Profile
+
+------------------------*/
+
+#profManage .profile-pic {
+    max-width: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*----------------------------------------
+
+    Main Donation Button
+
+------------------------------------------*/
+#donateMain {
+    border-radius: 50%;
+    padding: 12px 2px;
+    height: 50px;
+    width: 50px;
+    background-color: #98012e;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/*----------------------------------------
+
+    Trip Menu Buttons
+    http://codepen.io/apocheau/pen/EKeZgg
+
+------------------------------------------*/
+
+.btn-group-sm .btn-fab {
+    padding-top: 10px;
+    position: fixed !important;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.btn-group .btn-fab {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#tripMenuMain {
+    bottom: 25px;
+    border-radius: 50%;
+    padding: 12px 2px;
+    height: 50px;
+    width: 50px;
+    background-color: #98012e;
+    right: 10px;
+}
+
+.miniMenu {
+    border-radius: 50%;
+    padding: 12px 2px;
+    height: 50px;
+    width: 50px;
+    border-color: #98012e;
+    background-color: #FFF;
+    border-width: 2px;
+}
+
+#editTripBtn {
+    bottom: 75px;
+    margin-bottom: 15px;
+}
+
+#cancel {
+    bottom: 120px;
+    margin-bottom: 25px;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10), 0 3px 6px 0 rgba(0,0,0,0.08);
+}
+
+#donateBtn {
+    bottom: 160px;
+    margin-bottom: 40px;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10), 0 3px 6px 0 rgba(0,0,0,0.08);
+}
+
+#viewDonationsBtn {
+    bottom: 200px;
+    margin-bottom: 55px;
+}
+
+/*--------------------------
+
+        Landing Page
+
+--------------------------*/
+.landing-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 15% 0 0 0 !important;
+}
+
+.home .col {
+    margin-top: 3%;
+}
+
+/*---------------------------
+
+    Customized Navbar
+    https://work.smarchal.com/twbscolor/
+
+---------------------------*/
+
+.logo-nav {
+    max-height: 50px;
+    padding: 5px;
+    float: left;
+}
+
+.navbar-default {
+    background-color: #98012e;
+    border-color: #660220;
+}
+
+    .navbar-default .navbar-brand {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #ffffff;
+            background-color: #660220;
+        }
+
+    .navbar-default .navbar-text {
+        color: #fff;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffff;
+            background-color: #660220;
+        }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: #660220;
+    }
+
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: #ffffff;
+        background-color: #660220;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: #660220;
+    }
+
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #660220;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ffffff;
+        }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #ffffff;
+    }
+
+    .navbar-default .navbar-link {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-link:hover {
+            color: #ffffff;
+        }
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #ffffff;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #660220;
+    }
+}
+
+.navbar-default .navbar-header {
+    margin-left: 15px!important;
+}
+
+/*---------------------------
+    Search in NavBar
+---------------------------*/
+.navbar-collapse form[role="search"] {
+		top: 0px;
+		right: 0px;
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+		z-index: 0;
+        float: left;
+	}
+    
+    .navbar-collapse form[role="search"] button {
+        margin-top: 0;
+        color: #fff;
+        background-color: transparent;
+    }
+
+	.navbar-collapse form[role="search"] button,
+	.navbar-collapse form[role="search"] input {
+		padding: 8px 12px;
+		border-radius: 5px;
+		border-width: 0px;		
+		border-color: rgb(231, 231, 231);
+		box-shadow: none;
+		outline: none;
+	}
+	.navbar-collapse form[role="search"] input {
+		padding: 16px 12px;
+		font-size: 14pt;
+		font-style: italic;
+		color: rgb(160, 160, 160);
+		box-shadow: none;
+	}
+	.navbar-collapse form[role="search"] button[type="reset"] {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.navbar-collapse form[role="search"] {
+			width: 38px;
+		}
+		.navbar-collapse form[role="search"] button,
+		.navbar-collapse form[role="search"] input {
+			padding: 15px 12px;
+		}
+		.navbar-collapse form[role="search"] input {
+			padding: 15px 12px;
+			font-size: 16pt;
+			opacity: 0;
+			display: none;
+		}
+		.navbar-collapse form[role="search"].active {
+			margin-top: 10px;
+		}
+		.navbar-collapse form[role="search"].active button,
+		.navbar-collapse form[role="search"].active input {
+			display: table-cell;
+			opacity: 1;
+		}
+    	.navbar-collapse form[role="search"].active input {
+			width: 100%;
+		}
+	}
+
+/*---------------------------
+    Search from School
+---------------------------*/
+#searchSch button {
+    max-width: 50px;
+    max-height: 35px;
+    margin: 0;
+    border-radius: 5px;
+    float: right;
+    padding: 0;
+}
+
+#searchSch input {
+    border-radius: 5px;
+    float: left;
+    margin: 0;
+    padding: 0 12px;
+}
+
+#searchSch {
+    margin-left: 75%;
+}
+
+
+/*---------------------------
+
+css for donation success/fail
+
+---------------------------*/
+
+#successModalContent {
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #98012e;
+    width: 80%;
+    min-width: 425px;
+    padding: 20px;
+}
+
+.modal-backdrop {
+    z-index: -1;
+}
+
+#failedModalContent {
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #D63232;
+    width: 80%;
+    min-width: 425px;
+    padding: 20px;
+}
+
+
+/*---------------------------
+
+   payment button
+
+---------------------------*/
+.paymentBtn {
+    padding: 2px;
+    width: 50%;
+    margin-bottom: 5px;
+}
+/*---------------------------
+
+   donations list css
+
+---------------------------*/
+@media (min-width: 768px) {
+    #left, table {
+        position: relative;
+        overflow-y: scroll;
+    }
+}
+
+.donations table {
+    background-color: #efefef;
+}
+
+
+#left {
+    height: 50%;
+    background-color: #4FC1E9;
+    text-align: center;
+}
+
+#right {
+    height: 50%;
+    background-color: #4FC1E9;
+    text-align: center;
+}
+
+/*---------------------------
+
+   progress bar css
+
+---------------------------*/
+.progress-bar {
+    background-color: #98012e;
+}
+
+/*---------------------------
+
+   Donations Table css
+
+---------------------------*/
+
+.table-condensed {
+    font-size: 14px;
+}
+
+.modal {
+    text-align: center;
+}
+
+#thankModal {
+    margin: 10%;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 50%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:visited,
+.btn-success:focus,
+.btn-success:active {
+    color: #ffffff;
+    background-color: #98012e;
+    border-color: #98012e;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:visited,
+.btn-danger:focus .btn-danger:active {
+    color: #ffffff;
+    background-color: #556080;
+    border-color: #556080;
+}
+
+/*--------------------------------
+
+    Focus on Input Forms
+
+--------------------------------*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(114, 38, 38, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(114, 38, 38, 0.3);
+  outline: 0 none;
+}
+
+/*-------------------------------------
+
+    Remove Margins on Small Screens
+
+-------------------------------------*/
+@media only screen and (max-width: 40em) { 
+   .body-content, 
+   .container-fluid, 
+   #searchSch {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+   .school-card .card-prof-pic,
+   #sch-StuProfile-cards .card-prof-pic {
+       top: 43%;
+       left: 20%;
+   }
+}
+
+@media (min-width: 1200px) {
+    #donateToggle .container, 
+    #schDonateToggle .container {
+        width: inherit;
+    }
+}

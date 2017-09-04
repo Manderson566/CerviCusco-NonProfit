@@ -1,0 +1,120 @@
+﻿@model SendMe.ViewModels.SchoolViewModel
+
+@{
+    ViewBag.Title = "All Students";
+}
+
+<!--------SCHOOL DETAILS---------->
+<div class="profile-card school-card">
+    <div class="card">
+        <div class="card-img-top" style="background-image: url(@Model.CoverImg.FilePath)"></div>
+            <a href="@Model.School.Website" target="_blank" class="center-block" style="max-width:25%">
+                <img class="card-prof-pic" src="@Model.LogoImg.FilePath" />
+            </a>
+        <div class="card-block">
+            @if (User.IsInRole("Admin") && ViewBag.UserSchId == Model.School.Id)
+            {
+                <h6 class="card-subtitle text-muted">
+                    @Html.ActionLink("Edit", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </h6>
+            }
+
+            <form class="search" id="searchSch">
+                <div class="input-group">
+                    <input type="text" placeholder="Search" aria-describedby="basic-addon2">
+                    <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="sch-StuProfile-cards">
+    <div class="row-fluid">
+        <div class="card-group">
+            @ViewBag.NullSearch
+            <!-------------STUDENT DETAILS------------->
+            @foreach (var student in Model.Students)
+            {
+                <div class="col-sm-12 col-lg-4">
+                    <div class="profile-card sm-prof-card">
+                        <div class="card">
+                            <div class="card-img-top"></div>
+                            <div class="profilePic-donate">
+                                <!--Profile Pic-->
+                                <img class="card-prof-pic-sm image-fluid" src="@student.Upload.FilePath" />
+                                @if (student.ActiveTrip != null)
+                                {
+                                    <!--Donate Button-->
+                                    <button class="btn btn-fab donateSch" data-toggle="tooltip"
+                                            data-placement="top" data-original-title="Donate" title="" id="schDonate"
+                                            data-id="@(student.ActiveTrip.Trip.Id)" data-username="@(student.User.UserName)">
+                                        <i class="material-icons">
+                                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                                <path fill="#FFF" d="M11,4.5H13V15.5H11V4.5M13,17.5V19.5H11V17.5H13Z" />
+                                            </svg>
+                                        </i>
+                                    </button>
+                                }
+                            </div>
+                            <div class="card-text">
+                                <h2 class="card-title">
+                                    <!--Student Name-->
+                                    <a href="../../send/@student.User.UserName" data-toggle="tooltip" data-placement="bottom" data-original-title="View Profile">
+                                        @student.Student.FirstName @student.Student.LastName
+                                    </a>
+                                </h2>
+                            </div>
+                            <div class="card-block">
+                                <!--Trip Details-->
+                                @if (student.ActiveTrip != null)
+                                {
+                                    <h4>
+                                        @student.ActiveTrip.Trip.DestinationCity in
+                                        @student.ActiveTrip.Trip.DestinationState,
+                                        @student.ActiveTrip.Trip.DestinationCountry
+                                    </h4>
+                                    <sup>@student.ActiveTrip.Trip.Dates</sup>
+                                    <p style="text-align: right">@student.ActiveTrip.Trip.PercentOfAmnt% Raised</p>
+
+                                    if (User.IsInRole("Admin") && ViewBag.UserSchId == Model.School.Id)
+                                    {
+                                        <div class="schViewDonsToggle" style="float:right">
+                                            <sup>View Donations</sup>
+                                            <span class="glyphicon glyphicon-chevron-right"
+                                                  data-toggle="collapse" data-target="@("#schViewDons" + student.Student.Id)">
+                                            </span>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <h4>@student.Student.FirstName does not have any active trips.</h4>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="@("schViewDons" + student.Student.Id)" class="collapse">
+                    <div class="col-sm-12 col-md-6">
+                        @{ Html.RenderPartial("_ViewDonationsPartial", student); }
+                    </div>
+                </div>
+                            }
+        </div>
+    </div>
+</div>
+
+<div id="schDonateToggle" class="school-card col-sm-12 col-lg-5 col-lg-offset-3">
+    <div class="card">
+        @{Html.RenderPartial("_PaymentPartial");}
+        <script language="JavaScript" type="text/javascript">
+
+            var pubKey = '@System.Configuration.ConfigurationManager.AppSettings["PubKey"]';
+
+        </script>
+    </div>
+</div>

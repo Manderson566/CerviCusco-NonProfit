@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h1><img src="~/Img/SendMe Banner.png" class="about-title" /></h1>
+<hr />
+
+<script type="text/javascript">
+    var destinations = [];
+    @foreach(var destination in ViewBag.Destination)
+{
+    <text>
+    destinations.push('@destination.Destination');
+    </text>
+}
+</script>
+
+<!--Map-->
+@{double total = 0.0;}
+@foreach (var amount in ViewBag.TotalDonations)
+{
+    total += amount.Amount;
+}
+<div class="row">
+    <div class="about-content">
+        <div class="container">
+            <div id="mapAll" style=" height: 300px;  border: 3px solid #DADEE0"></div>
+            <sup class="text-muted">SendMe! has helped raise $@total.00 to send @ViewBag.TotalStudents.Count students to @ViewBag.Destination.Count different destinations!</sup>
+        </div>
+    </div>
+</div>
+
+<!--About the Creators-->
+<div class="row about-content">
+    <h2>The Faces behind SendMe!</h2>
+    <div class="col-sm-12 col-md-6">
+        <img class="profile-pic" src="~/Img/mic-anderson.jpg" />
+        <h3>
+            <a href="www.github.com/manderson566" class="social-icon" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+            <strong>Michael Anderson</strong>
+        </h3>
+        <hr />
+        <p>
+            Michael is from Rock Hill, SC and was working as a Construction Materials Inspector before deciding to
+            pursue back-end engineering at The Iron Yard in Greenville, SC.
+            His favorite part about programming is getting a chance to dive into understanding exactly how the different cogs work together in turning the wheel. 
+        </p>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <img class="profile-pic" src="~/Img/kris-sindorf.jpg" />
+        <h3>
+            <a href="www.github.com/ksindorf000" class="social-icon" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+            <strong>Kristin Sindorf</strong>
+        </h3>
+        <hr />
+        <p>
+            Kristin is from Greenville, SC and was working as an application administrator
+            before deciding to pursue back-end engineering at The Iron Yard.
+            Her favorite part about programming is that there is always more to learn!
+        </p>
+    </div>
+</div>
+
+<!--About the Project-->
+<div class="row about-content">
+    <h2>About the Project</h2>
+    <div class="col-sm-12 col-md-6">
+        <h3>
+            <strong>The Background</strong>
+        </h3>
+        <hr />
+        <h4><strong>The Problem</strong></h4>
+        <p>
+            Students need to be able to raise and track funds for their
+            study abroad trips. Faculty and staff need to be able to track students'
+            fund-raising progress and make sure that the funds get where they need to go.
+            However, since there is no standard system for students to use, faculty and
+            staff end up having to keep up with multiple applications depending on each
+            student's tracking method of choice.
+        </p>
+        <br/>
+        <h4><strong>The Solution</strong></h4>
+        <p>
+            SendMe! is a secure, user-friendly application that allows students to
+            create profiles in order to receive funds from donors.
+            Students will have to verify their school email address and so
+            will be affiliated with their school in the application. Each school will have
+            a dedicated page where the progress of their students' fund-raising is displayed.
+            This will make it easy for faculty and staff to keep up with all of their
+            students in one place.
+        </p>
+        <p>
+            As an added bonus, through the use of a general school profile, Alumni of each school
+            who wish to donate to current students have the opportunity to do so without needing
+            to reach out to the school's administration to find out where to send funds.
+        </p>
+
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+        <h3>
+            <strong>The Future</strong>
+        </h3>
+        <hr />
+        <p>
+            <h4><strong>Features to Add</strong></h4>
+            <ul>
+                <li>Search by School, Student or Trip</li>
+                <li>Administrators create Trips instead of students (for consistency)</li>
+                <li>Ability to Share to Social Media</li>
+            </ul>
+        </p>
+        <p>
+            <h4><strong>Big Dreams</strong></h4>
+            <ul>
+                <li>Mobile App</li>
+            </ul>
+        </p>
+    </div>
+
+</div>
+
